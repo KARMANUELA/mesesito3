@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 Meses Juntos ❤️</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6e6fa; /* Fondo lila */
+      color: #4b0082; /* Texto morado oscuro para mejor contraste */
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 600px;
+      width: 90%;
+      padding: 20px;
+    }
+    .card {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      margin: 20px auto;
+      text-align: center;
+    }
+    .card h2 {
+      color: #e74c3c;
+      margin: 0;
+      font-size: 1.5em;
+    }
+    .card p {
+      font-size: 1em;
+      line-height: 1.6;
+      margin: 15px 0 0;
+      color: #333; /* Texto oscuro para las tarjetas */
+    }
+    .hidden {
+      display: none;
+    }
+
+    /* Estilos para móviles */
+    @media (max-width: 480px) {
+      .card h2 {
+        font-size: 1.3em;
+      }
+      .card p {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Primera tarjeta -->
+    <div class="card" id="card1" onclick="showNextCard(2)">
+      <h2>¡Hola mi amor! 🐰❤️</h2>
+      <p>Hoy celebramos 3 meses juntos, y quiero que abras esta tarjeta para descubrir algo especial. ¡Haz clic aquí!</p>
+    </div>
+
+    <!-- Segunda tarjeta -->
+    <div class="card hidden" id="card2" onclick="showNextCard(3)">
+      <h2>Mi vidita ❤️</h2>
+      <p>La paciencia es una virtud que tú sabes mantener. 😌</p>
+    </div>
+
+    <!-- Tercera tarjeta -->
+    <div class="card hidden" id="card3" onclick="showNextCard(4)">
+      <h2>¡Sorpresa! 🎉</h2>
+      <p>jajaja ya casi... 😜</p>
+    </div>
+
+    <!-- Cuarta tarjeta -->
+    <div class="card hidden" id="card4" onclick="showNextCard(5)">
+      <h2>¡Otra tarjeta! 🎁</h2>
+      <p>Te prometo que no es broma xd. 😅</p>
+    </div>
+
+    <!-- Quinta tarjeta -->
+    <div class="card hidden" id="card5" onclick="showNextCard(6)">
+      <h2>Amor ❤️</h2>
+      <p>Tenía que ser especial por los 3 meses. 🐰</p>
+    </div>
+
+    <!-- Sexta tarjeta -->
+    <div class="card hidden" id="card6" onclick="showNextCard(7)">
+      <h2>¡Sigue adelante! �</h2>
+      <p>No todos los días se cumplen tres meses. 😊</p>
+    </div>
+
+    <!-- Séptima tarjeta -->
+    <div class="card hidden" id="card7" onclick="showNextCard(8)">
+      <h2>¡Felices 200 días! 🎉</h2>
+      <p>Según SumOne, ya casi llegamos. 😎</p>
+    </div>
+
+    <!-- Octava tarjeta -->
+    <div class="card hidden" id="card8" onclick="showNextCard(9)">
+      <h2>lol hermano q mal 😂</h2>
+      <p>Petra y yo te amamos. 🐾❤️</p>
+    </div>
+
+    <!-- Novena tarjeta (final) -->
+    <div class="card hidden" id="card9">
+      <h2>¡Felices 3 meses! ❤️</h2>
+      <p>
+        Mi amor, hoy celebramos 3 meses juntos y quiero agradecerte por todo el amor, la paciencia y la comprensión que me das cada día. Eres una de las personas que más amo en mi vida, y espero que podamos seguir compartiendo y creciendo juntos como personas. Gracias por ser mi compañero en esta aventura. Te amo más de lo que las palabras pueden expresar. 🐰❤️
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showNextCard(cardNumber) {
+      // Oculta la tarjeta actual
+      const currentCard = document.getElementById(`card${cardNumber - 1}`);
+      currentCard.classList.add("hidden");
+
+      // Muestra la siguiente tarjeta
+      const nextCard = document.getElementById(`card${cardNumber}`);
+      if (nextCard) {
+        nextCard.classList.remove("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
